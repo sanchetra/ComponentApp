@@ -18,6 +18,7 @@ import com.example.componentapp.layouts.LazyHorizontalGridLayout
 import com.example.componentapp.layouts.LazyRowLayout
 import com.example.componentapp.layouts.LazyVerticalGridLayout
 import com.example.componentapp.layouts.RowLayout
+import com.example.componentapp.navigation.NavigationRoot
 import com.example.componentapp.ui.theme.ComponentAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -26,9 +27,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             ComponentAppTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    LazyHorizontalGridLayout()
-                }
+                NavigationRoot()
             }
         }
     }
